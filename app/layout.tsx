@@ -10,6 +10,7 @@ import '@fontsource/luxurious-script/400.css';
 import "@fontsource/luxurious-script/400.css";
 import "@fontsource/kalam/300.css";
 import "@fontsource/inter/400.css";
+import '@fontsource-variable/newsreader/wght.css';
 import "./globals.css";
 
 const geistSans = Geist({

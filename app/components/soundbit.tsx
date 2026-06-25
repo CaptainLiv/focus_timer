@@ -61,9 +61,8 @@ export default function SoundBit({ name, getSharedAnalyser }: SoundbitProps) {
                 value="check"
                 selected={selected}
                 onChange={() => setSelected((s) => !s)}
-                sx={{ minWidth: 120 }}
             >
-                {name.split(".")[0]}
+                {name.split(".")[0].replace("_", " ")}
             </ToggleButton>
 
             <Slider
@@ -73,7 +72,6 @@ export default function SoundBit({ name, getSharedAnalyser }: SoundbitProps) {
                 valueLabelDisplay="auto"
                 size="small"
                 disabled={!selected}
-                sx={{ width: 120 }}
             />
         </div>
     );

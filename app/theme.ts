@@ -50,7 +50,7 @@ export const getTheme = (mode: "light" | "dark") =>
     },
 
     button: {
-      fontFamily: '"Inter", sans-serif',
+      fontFamily: '"Newsreader Variable", serif',
       textTransform: "none",
       fontWeight: 600,
     },

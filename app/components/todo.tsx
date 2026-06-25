@@ -57,7 +57,7 @@ export default function Todo() {
 
 
     return (
-        <Paper className="flex flex-col flex-1 items-center justify-start font-sans    w-1/2 break-all p-8 m-4">
+        <Paper className="flex flex-col flex-1 items-center justify-start font-sans    w-1/2 break-all p-8 m-2">
             <Typography variant="h1">Todo</Typography>
             <List className="overflow-y-auto w-1/1 scrollbar-thumb-gray-500">
                 <ListItem>
@@ -70,9 +70,9 @@ export default function Todo() {
                         className="w-1/1" />
                 </ListItem>
                 {todos.map((todo, index) => (
-                    <div>
+                    <div key={index}>
                         <Divider />
-                        <TodoItem key={index} todo={todo} index={index} removeFunc={removeTodo} />
+                        <TodoItem todo={todo} index={index} removeFunc={removeTodo} />
                     </div>
                 ))}
             </List>
