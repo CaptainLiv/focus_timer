@@ -1,8 +1,5 @@
-const fs = require('fs').promises;
+import { soundFiles } from '@/generated/sounds';
 
-export async function GET(request : Request){
-
-    const files : string[]= await fs.readdir("./public/sounds", { withFileTypes: false });
-    return Response.json(files)
-
+export async function GET(request: Request) {
+  return Response.json(soundFiles);
 }

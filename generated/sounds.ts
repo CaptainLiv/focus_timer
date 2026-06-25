@@ -1,0 +1,1 @@
+export const soundFiles = ["cafe.mp3","fire.mp3","guitarre.mp3","jazz.mp3","night.mp3","rain.mp3","waves.mp3","white_noise.mp3"];
