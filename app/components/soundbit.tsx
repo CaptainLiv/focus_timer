@@ -19,6 +19,7 @@ export default function SoundBit({ name }: SoundbitProps) {
     useEffect(() => {
         if (selected && audio?.paused) {
             audio?.play();
+            audio.loop = true;
         }
         else {
             audio?.pause();
