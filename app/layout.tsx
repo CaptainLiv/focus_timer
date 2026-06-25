@@ -6,6 +6,10 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import '@fontsource/luxurious-script/400.css';
+import "@fontsource/luxurious-script/400.css";
+import "@fontsource/kalam/300.css";
+import "@fontsource/inter/400.css";
 import "./globals.css";
 
 const geistSans = Geist({

@@ -1,7 +1,7 @@
 "useClient"
 import { useEffect, useState } from "react";
 import SoundBit from "./soundbit";
-import { Paper } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 
 export default function Sounds() {
     const [sounds, setSounds] = useState<Array<string>>([])
@@ -20,7 +20,7 @@ export default function Sounds() {
 
     return (
         <Paper className="flex flex-col flex-1 items-center justify-start  font-sans w-1/1  p-8 gap-8">
-            <h1 className="text-5xl font-bold text-black dark:text-white">Sounds</h1>
+            <Typography variant="h1">Sounds</Typography>
             <div className="flex flex-row flex-wrap items-center justify-center gap-4 overflow-y-auto">
                 {sounds.map((sound, index) => (
                     <SoundBit key={index} name={sound} />

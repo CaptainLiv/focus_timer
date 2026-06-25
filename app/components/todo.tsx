@@ -1,5 +1,5 @@
 "use client";
-import { Checkbox, Divider, List, ListItem, ListItemIcon, ListItemText, Paper, TextField } from "@mui/material";
+import { Checkbox, Divider, List, ListItem, ListItemIcon, ListItemText, Paper, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import TodoItem from "./todo_item";
 
@@ -58,7 +58,7 @@ export default function Todo() {
 
     return (
         <Paper className="flex flex-col flex-1 items-center justify-start font-sans    w-1/2 break-all p-8 m-4">
-            <h1 className="text-5xl font-bold text-black dark:text-white">Todo</h1>
+            <Typography variant="h1">Todo</Typography>
             <List className="overflow-y-auto w-1/1">
                 <ListItem>
                     <TextField

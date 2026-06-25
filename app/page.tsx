@@ -8,6 +8,7 @@ import Sounds from "./components/sounds";
 import { getTheme } from "./theme";
 import Pomodoro from "./components/pomodoro";
 
+
 export default function Home() {
   const [mode] = useState<"light" | "dark">("dark");
   const theme = useMemo(() => getTheme(mode), [mode]);
