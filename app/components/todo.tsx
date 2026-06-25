@@ -59,7 +59,7 @@ export default function Todo() {
     return (
         <Paper className="flex flex-col flex-1 items-center justify-start font-sans    w-1/2 break-all p-8 m-4">
             <Typography variant="h1">Todo</Typography>
-            <List className="overflow-y-auto w-1/1">
+            <List className="overflow-y-auto w-1/1 scrollbar-thumb-gray-500">
                 <ListItem>
                     <TextField
                         value={newTodo}

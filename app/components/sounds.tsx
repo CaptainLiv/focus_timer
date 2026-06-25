@@ -43,19 +43,20 @@ export default function Sounds() {
         <Paper className="flex flex-col items-center justify-start h-1/2 p-4">
             <Typography variant="h1">Sounds</Typography>
 
-
-            <div className="flex flex-row flex-wrap gap-2">
-                {sounds.map((sound, index) => (
-                    <SoundBit
-                        key={index}
-                        name={sound}
-                        getSharedAnalyser={getOrCreateSharedAnalyser}
-                    />
-                ))}
+            <div className="max-h-full">
+                <div className="flex flex-row flex-wrap gap-2 max-h-1/2 overflow-y-auto scrollbar-thumb-gray-500">
+                    {sounds.map((sound, index) => (
+                        <SoundBit
+                            key={index}
+                            name={sound}
+                            getSharedAnalyser={getOrCreateSharedAnalyser}
+                        />
+                    ))}
+                </div>
+                {analyserReady && analyserRef.current && (
+                    <SpectrumBars analyser={analyserRef.current} />
+                )}
             </div>
-            {analyserReady && analyserRef.current && (
-                <SpectrumBars analyser={analyserRef.current} />
-            )}
         </Paper>
     );
 }

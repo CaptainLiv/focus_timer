@@ -68,7 +68,7 @@ export default function SpectrumBars({
             style={{
                 display: "block",
                 width: "100%",
-                height: "100%",
+                height: "50%",
                 background: "transparent",
                 borderRadius: 4,
             }}
