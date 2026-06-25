@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <div className="flex h-screen max-w-screen f-screen flex-row">
-        <div className="flex flex-col flex-1 items-center justify-center font-sans w-1/2">
+        <div className="flex flex-col flex-1 items-center justify-center font-sans w-1/2 m-4 gap-8">
           <Pomodoro />
           <Sounds />
         </div>

@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Pomodoro() {
     const [state, setState] = useState(0);
     return (
-        <Paper className="flex flex-col flex-1 items-center justify-center font-sans w-1/1 max-h-1/2 m-4 gap-2">
+        <Paper className="flex flex-col flex-1 items-center justify-center font-sans w-1/1 max-h-1/2 gap-2">
             <ToggleButtonGroup value={state} onChange={(_, value) => { if (value !== null) setState(value) }} color="primary" exclusive sx={{ "& .Mui-disabled": { color: "white" }, "& .Mui-selected": { color: "white", backgroundColor: "#1976d2" } }}>
                 <ToggleButton value={0}>Focus</ToggleButton>
                 <ToggleButton value={1}>Short Break</ToggleButton>

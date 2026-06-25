@@ -19,7 +19,7 @@ export default function Sounds() {
     }
 
     return (
-        <Paper className="flex flex-col flex-1 items-center justify-start  font-sans w-1/1 m-4 p-8 gap-2">
+        <Paper className="flex flex-col flex-1 items-center justify-start  font-sans w-1/1  p-8 gap-8">
             <h1 className="text-5xl font-bold text-black dark:text-white">Sounds</h1>
             <div className="flex flex-row flex-wrap items-center justify-center gap-4 overflow-y-auto">
                 {sounds.map((sound, index) => (
