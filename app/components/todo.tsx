@@ -1,5 +1,5 @@
 "use client";
-import { Checkbox, List, ListItem, ListItemIcon, ListItemText, TextField } from "@mui/material";
+import { Checkbox, Divider, List, ListItem, ListItemIcon, ListItemText, Paper, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import TodoItem from "./todo_item";
 
@@ -57,21 +57,25 @@ export default function Todo() {
 
 
     return (
-        <div className="flex flex-col flex-1 items-center justify-start bg-zinc-50 font-sans dark:bg-black max-h-screen ">
+        <Paper className="flex flex-col flex-1 items-center justify-start font-sans    w-1/2 break-all p-8 m-4">
             <h1 className="text-5xl font-bold text-black dark:text-white">Todo</h1>
-            <List className="overflow-y-auto">
+            <List className="overflow-y-auto w-1/1">
                 <ListItem>
                     <TextField
                         value={newTodo}
                         onChange={(e) => setNewTodo(e.target.value)}
                         label="Add Todo"
                         variant="outlined"
-                        onKeyDown={onEnter} />
+                        onKeyDown={onEnter}
+                        className="w-1/1" />
                 </ListItem>
                 {todos.map((todo, index) => (
-                    <TodoItem key={index} todo={todo} index={index} removeFunc={removeTodo} />
+                    <div>
+                        <Divider />
+                        <TodoItem key={index} todo={todo} index={index} removeFunc={removeTodo} />
+                    </div>
                 ))}
             </List>
-        </div>
+        </Paper>
     );
 }
