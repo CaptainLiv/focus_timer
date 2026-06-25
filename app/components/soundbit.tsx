@@ -13,7 +13,7 @@ export default function SoundBit({ name }: SoundbitProps) {
 
     useEffect(() => {
         audio?.pause()
-        setAudio(new Audio(`/sounds/${name}.mp3`))
+        setAudio(new Audio(`/sounds/${name}`))
     }, [])
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export default function SoundBit({ name }: SoundbitProps) {
     return (
         <div>
             <ToggleButton value="enabled" selected={selected} onChange={(event, newSelected) => { setSelected(!selected) }}>
-                {name}
+                {name.split(".")[0]}
             </ToggleButton>
             {selected ? <Slider value={volume} onChange={(e, newValue) => { setVolume(newValue as number); if (audio !== undefined) { audio.volume = (newValue as number) / 100; } }} aria-label="Volume" valueLabelDisplay="auto" size="small" /> : <Slider value={volume} onChange={(e, newValue) => { setVolume(newValue as number); if (audio !== undefined) { audio.volume = (newValue as number) / 100; } }} aria-label="Volume" valueLabelDisplay="auto" size="small" disabled />}
         </div>
