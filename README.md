@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Focus Timer
+
+> A modular, browser-based productivity tool combining a Pomodoro timer, layerable ambient sounds, and a session-aware todo list. All in one distraction-free interface.
+***
+
+## Features
+
+### 🍅 Pomodoro Timer
+- Three time intervals: **5**, **15**, and **25** minutes
+- Start, pause, and switch between Focus / Short Break / Long Break modes
+- Audio alert when the timer expires
+
+### 🎵 Ambient Sound Mixer
+- Layer multiple ambient sounds simultaneously (rain, café, forest, etc.)
+- Independently toggle and adjust the volume of each track
+- Real-time audio visualizer
+- Easily extensible (drop any `.mp3` or `.wav` into `./public/sounds/` to add it)
+
+### ✅ Todo List
+- Add, complete, and remove tasks
+- Session-aware: todos are tied to the device and session, and automatically cleared after **24 hours of inactivity**
+
+***
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | [Next.js](https://nextjs.org/) + [React](https://react.dev/) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) |
+| UI Components | [Material UI (MUI)](https://mui.com/) |
+
+***
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js >= 18
+- npm / yarn / pnpm / bun
+
+### Installation
+
+```bash
+git clone https://github.com/CaptainLiv/focus_timer.git
+cd focus-timer
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run prebuild
+npm run build
+npm start
+```
 
-## Learn More
+***
 
-To learn more about Next.js, take a look at the following resources:
+## Adding Ambient Sounds
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Place any `.mp3` or `.wav` file into the `./public/sounds/` directory. The app will automatically detect and list it in the sound mixer on the next reload — no code changes needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+***
 
-## Deploy on Vercel
+## Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Custom timer intervals
+- [ ] Dark / light mode toggle
+- [ ] Import/Export todo list as Markdown
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
