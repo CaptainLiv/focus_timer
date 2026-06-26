@@ -68,9 +68,10 @@ export default function SpectrumBars({
             style={{
                 display: "block",
                 width: "100%",
-                height: "auto",
+                height: "50%",
                 background: "transparent",
                 borderRadius: 4,
+                overflow: "hidden"
             }}
             aria-label="Audio spectrum visualizer"
         />
