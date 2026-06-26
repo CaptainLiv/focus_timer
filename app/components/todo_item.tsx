@@ -1,37 +1,41 @@
 "use client";
-import { ListItem, ListItemIcon, Checkbox, ListItemText, Typography } from "@mui/material";
+import { ListItem, ListItemIcon, Checkbox, ListItemText, Typography, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
+import DeleteIcon from '@mui/icons-material/Delete';
+
+type todo = {
+    id: string,
+    content: string,
+    done: boolean
+}
 
 type TodoItemProps = {
-    todo: string;
-    index: number;
-    removeFunc: (index: number) => Promise<void>
+    todo: todo;
+    removeFunc: (id: string) => void
+    toggleFunc: (id: string) => void
 };
 
-export default function TodoItem({ todo, index, removeFunc }: TodoItemProps) {
-    const [checked, setChecked] = useState(false);
-
-    useEffect(() => {
-        if (checked) {
-            removeFunc(index)
-            setChecked(false)
-        }
-    }, [checked])
+export default function TodoItem({ todo, removeFunc, toggleFunc }: TodoItemProps) {
+    const [checked, setChecked] = useState(todo.done);
 
     return (
-        <ListItem key={index} className="text-xl text-black dark:text-white text-wrap w-1/1">
+        <ListItem key={todo.id} className="text-xl text-black dark:text-white text-wrap w-1/1" secondaryAction={
+            <IconButton edge="end" aria-label="delete" onClick={() => { removeFunc(todo.id) }}>
+                <DeleteIcon />
+            </IconButton>
+        }>
             <ListItemIcon>
                 <Checkbox
                     edge="start"
                     checked={checked}
-                    onChange={(e) => setChecked(e.target.checked)}
+                    onChange={(e) => { setChecked(e.target.checked); toggleFunc(todo.id) }}
                     tabIndex={-1}
                     disableRipple
                 />
             </ListItemIcon>
             <ListItemText >
                 <Typography variant="body1">
-                    {todo}
+                    {checked ? <s>{todo.content}</s> : todo.content}
                 </Typography>
             </ListItemText>
         </ListItem>

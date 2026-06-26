@@ -1,8 +1,6 @@
 "use client";
-import Image from "next/image";
-import Timer from "./components/timer";
 import { useMemo, useState } from "react";
-import { Button, ButtonGroup, ThemeProvider, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import Todo from "./components/todo";
 import Sounds from "./components/sounds";
 import { getTheme } from "./theme";

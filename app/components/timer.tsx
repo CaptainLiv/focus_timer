@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
-import { Dialog, Typography } from "@mui/material";
+import { Dialog } from "@mui/material";
 
 type TimerProps = {
     limit: number;
