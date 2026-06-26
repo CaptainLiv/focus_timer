@@ -3,6 +3,7 @@
 > A modular, browser-based productivity tool combining a Pomodoro timer, layerable ambient sounds, and a session-aware todo list. All in one distraction-free interface.
 ***
 
+
 ## Features
 
 ### 🍅 Pomodoro Timer
@@ -19,6 +20,13 @@
 ### ✅ Todo List
 - Add, complete, and remove tasks
 - Session-aware: todos are tied to the device and session, and automatically cleared after **24 hours of inactivity**
+
+***
+## Design
+Responsive design
+![PC](./docs/Layout_PC.png)
+
+<img src="./docs/Design_mobile.png" alt="drawing" width="200"/>
 
 ***
 
