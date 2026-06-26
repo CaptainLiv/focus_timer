@@ -40,11 +40,11 @@ export default function Sounds() {
     }
 
     return (
-        <Paper className="flex flex-col items-center justify-start h-1/2 p-4 w-full">
+        <Paper className="flex flex-col items-center justify-start md:h-1/2 p-4 w-full">
             <Typography variant="h1">Sounds</Typography>
 
-            <div className="h-full w-full">
-                <div className="flex flex-row flex-wrap justify-start  gap-2 h-1/2 overflow-y-auto scrollbar-thumb-gray-500">
+            <div className="md:h-full w-full flex flex-col">
+                <div className="flex flex-row flex-wrap justify-start  gap-2 h-1/3  overflow-y-auto scrollbar-thumb-gray-500">
                     {sounds.map((sound, index) => (
                         <SoundBit
                             key={index}

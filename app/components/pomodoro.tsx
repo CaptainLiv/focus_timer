@@ -13,9 +13,9 @@ export default function Pomodoro() {
             {state === 1 && <Timer limit={5} />}
             {state === 2 && <Timer limit={15} />}
             <ToggleButtonGroup value={state} onChange={(_, value) => { if (value !== null) setState(value) }} color="primary" exclusive >
-                <ToggleButton value={0} className="w-32">Focus</ToggleButton>
-                <ToggleButton value={1} className="w-32">Short Break</ToggleButton>
-                <ToggleButton value={2} className="w-32">Long Break</ToggleButton>
+                <ToggleButton value={0} className="md:w-32 w-23">Focus</ToggleButton>
+                <ToggleButton value={1} className="md:w-32 w-23">Short Break</ToggleButton>
+                <ToggleButton value={2} className="md:w-32 w-23">Long Break</ToggleButton>
             </ToggleButtonGroup>
         </Paper>
     )

@@ -38,7 +38,7 @@ export default function Timer({ limit }: TimerProps) {
     return (
         <div className="text-5xl font-bold text-#F1E7D0 flex flex-col items-center justify-center gap-4">
             <Dialog onClose={() => setOpen(false)} open={open}>
-                Your ${limit} minute timer is over
+                Your {limit} minute timer is over
             </Dialog>
             <div className="w-full font-mono">
                 {String(limit - minutes).padStart(2, "0")}:{String(60 - seconds).padStart(2, "0")}
