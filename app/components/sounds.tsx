@@ -40,7 +40,7 @@ export default function Sounds() {
     }
 
     return (
-        <Paper className="flex flex-col items-center justify-start md:h-1/2 p-4 w-full">
+        <Paper className="flex flex-col items-center justify-start md:h-1/2 p-4 w-full md:overflow-y-hidden">
             <Typography variant="h1">Sounds</Typography>
 
             <div className=" w-full flex flex-col place-content-between h-full">
